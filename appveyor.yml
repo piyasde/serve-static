@@ -3,9 +3,12 @@ environment:
     - nodejs_version: "0.8"
     - nodejs_version: "0.10"
     - nodejs_version: "0.11"
+    - nodejs_version: "1.0"
+    - nodejs_version: "1.1"
 matrix:
   allow_failures:
     - nodejs_version: "0.11"
+    - nodejs_version: "1.1"
   fast_finish: true
 install:
   - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version)
